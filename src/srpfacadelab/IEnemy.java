@@ -1,5 +1,5 @@
 package srpfacadelab;
 
 public interface IEnemy {
-    void takeDamage(int amount);
+  void takeDamage(int amount);
 }

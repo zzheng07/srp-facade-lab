@@ -2,85 +2,60 @@ package srpfacadelab;
 
 public class Item {
 
-    private int id;
+  private int id;
 
-    private String name;
+  private String name;
 
-    // How much the item heals by.
-    private int heal;
+  // How much this item weighs in pounds.
+  private int weight;
 
-    // How much armour the player gets when it is equipped.
-    private int armour;
+  // A unique item can only be picked up once.
+  private boolean unique;
 
-    // How much this item weighs in pounds.
-    private int weight;
+  // Rare items are shiny
+  private final boolean rare;
 
-    // A unique item can only be picked up once.
-    private boolean unique;
+  public Item(int id, String name, int weight, boolean unique, boolean rare) {
+    this.id = id;
+    this.name = name;
+    this.weight = weight;
+    this.unique = unique;
+    this.rare = rare;
+  }
 
-    // Rare items are shiny
-    private final boolean rare;
+  public int getId() {
+    return id;
+  }
 
-    public Item(int id, String name, int heal, int armour, int weight, boolean unique, boolean rare)
-    {
-        this.rare = rare;
-        this.setName(name);
-        this.setHeal(heal);
-        this.setArmour(armour);
-        this.setWeight(weight);
-        this.setUnique(unique);
-        this.setId(id);
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public int getId() {
-        return id;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public int getWeight() {
+    return weight;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setWeight(int weight) {
+    this.weight = weight;
+  }
 
-    public int getHeal() {
-        return heal;
-    }
+  public boolean isUnique() {
+    return unique;
+  }
 
-    public void setHeal(int heal) {
-        this.heal = heal;
-    }
+  public void setUnique(boolean unique) {
+    this.unique = unique;
+  }
 
-    public int getArmour() {
-        return armour;
-    }
-
-    public void setArmour(int armour) {
-        this.armour = armour;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public boolean isUnique() {
-        return unique;
-    }
-
-    public void setUnique(boolean unique) {
-        this.unique = unique;
-    }
-
-    public boolean isRare() {
-        return rare;
-    }
+  public boolean isRare() {
+    return rare;
+  }
 }
