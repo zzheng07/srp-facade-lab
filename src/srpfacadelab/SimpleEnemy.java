@@ -9,7 +9,6 @@ public class SimpleEnemy implements IEnemy {
     this.name = name;
   }
 
-  @Override
   public void takeDamage(int amount) {
     // Meant to be the simplest.
     // Allowing negative health
@@ -18,6 +17,14 @@ public class SimpleEnemy implements IEnemy {
 
   public String getName() {
     return name;
+  }
+
+  public int getHealth() {
+    return this.health;
+  }
+
+  public void setHealth(int health) {
+    this.health = health;
   }
 
 }
